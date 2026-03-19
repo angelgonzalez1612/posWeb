@@ -1,0 +1,13 @@
+services:
+  pos-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pos-web
+    restart: always
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
