@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: pos-web
     restart: always
+    ports:
+      - "5173:80"
     networks:
       - shared-network
 

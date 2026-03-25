@@ -28,6 +28,8 @@ export function LoginPage({ onLogin, error, loading }: LoginPageProps) {
             <span className="mb-2 block text-sm font-semibold text-slate-700">Correo</span>
             <input
               type="email"
+              name="email"
+              autoComplete="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm outline-none focus:border-sky-300"
@@ -39,6 +41,8 @@ export function LoginPage({ onLogin, error, loading }: LoginPageProps) {
             <div className="flex rounded-2xl border border-slate-200 bg-slate-50 focus-within:border-sky-300">
               <input
                 type={showPassword ? 'text' : 'password'}
+                name="password"
+                autoComplete="current-password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 className="w-full rounded-l-2xl bg-transparent px-4 py-4 text-sm outline-none"
